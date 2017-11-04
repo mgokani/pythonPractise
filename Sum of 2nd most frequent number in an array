@@ -1,0 +1,14 @@
+"""
+function takes array as an argument
+and calculates the sum of the 2nd most frequent number of the array
+"""
+
+def sum_of_frequent_numbers(array):
+    d = {array.count(x):x for x in array}
+    b = sorted(d.keys(), reverse=True) # reverse sort the array of all keys
+    result = b[1] * d.get(b[1])
+    return result
+
+if __name__ == "__main__":
+    array1 = [1,2,3,3,4,4,4,5,5,5,5]
+    print (sum_of_frequent_numbers(array1))
