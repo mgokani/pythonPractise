@@ -1,0 +1,14 @@
+"""
+function will combine two integer arrays
+(Eg array1 = [1,2,3], array 2 = [4,5,6], Expected output - [1,2,3,4,5,6])
+"""
+def combine_arrays(arr1, arr2):
+    arr3 = arr1
+    for i in range(len(arr2)):
+                arr3.append(arr2[i])
+    return arr3
+
+if __name__  == "__main__":
+    a = [1,2,3]
+    b = [4,5,6]
+    print (combine_arrays(a,b))
