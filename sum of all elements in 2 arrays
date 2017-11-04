@@ -1,0 +1,16 @@
+"""
+function takes 2 arguments which are both arrays
+and calculates the sum of all elements of the 2 arrays
+"""
+def sumofelements(arr1,arr2):
+    result = 0
+    for i in range(len(arr1)):
+        result += arr1[i]
+    for j in range(len(arr2)):
+        result += arr2[j]
+    return result
+
+if __name__ == "__main__":
+    array1 = [1,2,3,4]
+    array2 = [1,2,3,4]
+    print ("Sum of all elements in 2 arrays =", sumofelements(array1,array2))
