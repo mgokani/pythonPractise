@@ -1,0 +1,17 @@
+array = [[1,2],[3,4]]
+print (array)
+print (len(array))
+
+
+'''
+Function takes array as an argument and calculates sum of all the elements 
+of the array.
+'''
+def sumofelements(arr):
+  result = 0
+  for i in range (len(arr)):
+    for j in range (len(arr[i])):
+      result = result + arr[i][j]
+  return result
+
+print ("sum of all elements of the array = " , sumofelements(array))
