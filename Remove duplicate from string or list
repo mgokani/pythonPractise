@@ -1,0 +1,21 @@
+"""
+function to remove duplicate characters in a string
+Given a string "banana", return unique string "ban"
+"""
+def remove_dup_for_str(str1):
+    str2 = "".join(set(str1))
+    return str2
+
+'''
+function to remove duplicate elements from an array
+Given an array [1,2,2,3,3,3,4,4,4,4] the function will return an array with [1,2,3,4]
+'''
+def remove_dup_from_array(arr1):
+    arr2 = set(arr1)
+    return arr2
+
+if __name__  == "__main__":
+    a = "banana"
+    b = [1,2,2,3,3,3,4,4,4,4]
+    print (remove_dup_for_str(a))
+    print (remove_dup_from_array(b))
