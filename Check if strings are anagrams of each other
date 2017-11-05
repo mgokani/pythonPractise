@@ -1,0 +1,14 @@
+"""
+function to determine if 2 strings are anagrams of each other
+for example two strings "parachute" and "raphtueac"
+"""
+def check_anagrams(str1,str2):
+    if sorted(str1.lower()) == sorted(str2.lower()):
+        print ("strings are anagram")
+    else:
+        print ("strings are not anagram")
+
+if __name__  == "__main__":
+    a = "parachute"
+    b = "raphtueac"
+    check_anagrams(a,b)
