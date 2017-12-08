@@ -1,0 +1,8 @@
+a = "bananabananam"
+
+d = {a.count(x):x for x in a}
+print (d)
+
+for k,v in d.items():
+  if k != 1:
+    print (k,v)
