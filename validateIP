@@ -1,0 +1,25 @@
+'''
+given a string validate if it is a valid IP address
+
+split the string with delimiter as '.'
+store this in a list
+check the length of the list
+if len of list is not equal to 4, return False
+else check each element of the list is between 0 to 255
+'''
+
+def validateIP(ip):
+  octet = ip.split('.')
+  if len(octet) != 4:
+    return False
+  else:
+    validCount = 0
+    for item in octet:
+      if 0 <= int(item) <= 255:
+        validCount += 1
+  return (validCount == 4)
+
+  
+if __name__ == "__main__":
+  ip = '192.168.1.255'
+  print(ip + ' is a valid IP:', validateIP(ip))
