@@ -23,10 +23,7 @@
 '''
 
 with open('vmstat.log', 'r') as f:
-  next(f)
-  next(f)
   count = 0
-
   for line in f:
     val = line.split()[6]
     if int(val) > 200:
@@ -34,3 +31,5 @@ with open('vmstat.log', 'r') as f:
     if count == 5:
       print("alert")
       count = 0
+
+# input will be sys.stdin.read() 
