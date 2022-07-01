@@ -22,14 +22,13 @@
 # 6  4      0 477476 1698748 32836968  300    0     4  1459 3819 20150 39  2 42 17  0
 '''
 
-with open('vmstat.log', 'r') as f:
+import sys
+
+for line in sys.stdin:
   count = 0
-  for line in f:
-    val = line.split()[6]
+  val = line.split()[6]
     if int(val) > 200:
       count += 1
     if count == 5:
       print("alert")
       count = 0
-
-# input will be sys.stdin.read() 
